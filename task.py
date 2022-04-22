@@ -56,7 +56,6 @@ if __name__=="__main__":
                     print('number of open handles/fd is:', len(p.open_files()))
 
                     # saving data to csv:
-                    #output.writerow(['program', 'time', 'working set', 'Private bytes', 'cpu %', 'open handles/fd'])
                     output.writerow([filename, now, ws, pb, cpp, openh])
 
                     s.enter(user_input_time, 1, collect_data)
