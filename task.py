@@ -3,6 +3,7 @@ import psutil
 import threading
 import csv
 import datetime
+import ischedule
 
 # getting the file path from user:
 user_input_file = str(input("Enter the path of your file: "))
@@ -57,8 +58,6 @@ if __name__=="__main__":
         x = threading.Thread(target=collect_data)
         print("Collecting data...")
         x.start() 
-
-        import ischedule
 
         ischedule.schedule(collect_data, interval=user_input_time)
         ischedule.run_loop()
