@@ -15,9 +15,7 @@ user_input_time = int(input("Enter the time interval for collecting data (in sec
 assert os.path.exists(user_input_file), "I did not find the file at, "+str(user_input_file)
 print("File found!")
 
-# optional block. i don't know if this program is supposed to run as a standalone or as part of a module. 
-# Nevertheless, i decided to include it for good practice.
-if __name__=="__main__":    
+
      
     # creating/updating csv file:
     with open('resources_usage.csv', 'a+') as f:
